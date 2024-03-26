@@ -12,14 +12,14 @@ pwn = pwmio.PWMOut(board.GP1, duty_cycle=2 ** 15, frequency=50)
 
 # Create a servo object, my_servo.
 my_servo = servo.Servo(pwm)
-my_Servo = servo.Servo(pwn)
+my_servo1 = servo.Servo(pwn)
 
 while True:
     my_servo.angle = 0
-    my_Servo.angle = 0
+    my_servo1.angle = 0
     time.sleep(2)
     my_servo.angle = 180
-    my_Servo.angle = 180
+    my_servo1.angle = 180
     time.sleep(2)
 
 '''
